@@ -11,20 +11,11 @@ namespace Crud_Framework_Youtube1.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.Data.Entity.ModelConfiguration.Conventions;
-
+    
     public partial class location
     {
-        [Display(Name = "#")]
         public int id { get; set; }
-
-        [Display(Name = "Nombre del lugar")]
         public string nombre { get; set; }
-
-        [Display(Name = "Fecha")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        [DataType(DataType.DateTime)]
         public Nullable<System.DateTime> fecha { get; set; }
         public string observacion { get; set; }
         public Nullable<bool> estado { get; set; }

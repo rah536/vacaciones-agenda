@@ -17,6 +17,7 @@ namespace Crud_Framework_Youtube1.Controllers
         {
             using (DbModel context = new DbModel())
             {
+                //return View(context.location.Where(x => x.estado == true).ToList());
                 return View(context.location.ToList());
             }
             
@@ -27,7 +28,7 @@ namespace Crud_Framework_Youtube1.Controllers
         {
             using (DbModel context = new DbModel())
             {
-                return View(context.location.Where(x => x.id == id));
+                return View(context.location.Where(x => x.id == id).FirstOrDefault());
             }
 
         }
